@@ -19,16 +19,10 @@ MongoDB is a database that holds javascript objects.  The database itself is jus
 
 ## Get Mongo running
 
-1. You may need to install it using [Homebrew](https://brew.sh/)
-	- Mac OS X: `brew install mongodb`
+1. To install Mongodb please follow the install instructions on their site for your operating system.
+	- [Install Instructions](https://docs.mongodb.com/manual/administration/install-community/)
+
 1. In terminal type `mongod`
-	- you will probably get an error saying "Data directory /data/db not found., terminating"
-	- if so:
-		1. `sudo mkdir /data`
-		1. `sudo mkdir /data/db`
-		1. `sudo chmod -R 777 /data`
-	- `mongod`
-	- should see: "waiting for connections on port 27017"
 1. Open another terminal and type `mongo`
 
 To quit `mongo`, type `quit()`.  To quit `mongod` hit `control+c`
