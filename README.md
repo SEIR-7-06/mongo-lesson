@@ -22,18 +22,9 @@ MongoDB is a database that holds javascript objects.  The database itself is jus
 1. To install Mongodb please follow the install instructions on their site for your operating system.
 	- [Install Instructions](https://docs.mongodb.com/manual/administration/install-community/)
 
-1. In terminal type `mongod`
-1. Open another terminal and type `mongo`
+1. In terminal type `mongo`
 
-To quit `mongo`, type `quit()`.  To quit `mongod` hit `control+c`
-
-If at some point you get an error with `mongod`:
-
-1. <span style="text-decoration: line-through">`ps -A | grep mongod`</span>
-1. find the line that just mentions mongod, but not grep
-1. take note of the number on the left
-1. type `kill 1774` or whatever that number is.  Try `mongod` again.
-1. If that doesn't work, go to /data/db and `rm mongod.lock`.  Try `mongod` again.
+To quit `mongo`, type `quit()`.
 
 ## Diagram the structure of Mongo
 
