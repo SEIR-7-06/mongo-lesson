@@ -4,18 +4,18 @@
 1. Describe what Mongo is
 1. Get Mongo running
 1. Diagram the structure of Mongo
-1. List your sub databases
-1. Choose a sub database as a target for your actions
+1. List your databases
+1. Choose a database as a target for your actions
 1. Create a collection
 1. Insert a document into a collection
 1. Find a set of documents in a collection
 1. Remove a set of documents from a collection
 1. Update a set of documents in a collection
-1. Drop a Collection or an entire sub database
+1. Drop a Collection or an entire database
 
 ## Describe what Mongo is
 
-MongoDB is a database that holds javascript objects.  The database itself is just an application that runs quietly in the background and waits for connections (just like a web server).  You can connect to it in the same way that you would connect to a website, but instead of viewing a page, you can save, retrieve, update, and delete javascript objects to/from/in the database.
+MongoDB is a database technology that holds javascript objects.  The database server itself is just an application that runs quietly in the background and waits for connections (just like a web server).  You can connect to it in the same way that you would connect to a website, but instead of viewing a page, you can save, retrieve, update, and delete javascript objects to/from/in the database.
 
 ## Get Mongo running
 
@@ -28,27 +28,27 @@ To quit `mongo`, type `quit()`.
 
 ## Diagram the structure of Mongo
 
-The Mongo database application itself contains several imaginary "sub-databases" (not sure if that's an industry term or not).  Each sub-database can be assigned to a specific application.  Imagine you're Google, and you have lots of different applications.  You don't want the data for your mail application data mixed in with your maps application data.  These sub-databases allow you to keep information structured in a way that is logical.
+The Mongo database server itself contains several databases.  Each database will usually be used for a different project or application.  Imagine you're Google, and you have lots of different applications.  You don't want the data for your mail application data mixed in with your maps application data.  These different databases allow you to keep information structured in a way that is logical.
 
-## List your sub databases
+## List your databases
 
-To list the sub-databases in your Mongo application, use the following command:
+To list the databases in your Mongo application, use the following command:
 
 ```
 show dbs
 ```
 
-## Choose a sub database as a target for your actions
+## Choose a database as a target for your actions
 
-In general, you won't be switching back and forth between different sub-databases, since, presumably, you'll just be working on one application at a time.  Because of this, we "select" a sub-database.  Once selected, all the actions we call will affect that sub database until we "select" another.
+In general, you won't be switching back and forth between different databases, since, presumably, you'll just be working on one application at a time.  Because of this, we "select" a database.  Once selected, all the actions we call will affect that database until we "select" another.
 
-To choose (or create and choose) a sub-database, use the following command:
+To choose (or create and choose) a database, use the following command:
 
 ```
 use learn
 ```
 
-If we later want to remind ourselves what sub database we're using, use the following command:
+If we later want to remind ourselves what database we're using, use the following command:
 
 ```
 db
@@ -57,7 +57,7 @@ db
 
 ## Create a collection
 
-Inside our each sub-database, we can have various collections.  Each collection is a set of related JavaScript objects.  Imagine we're creating a mail application.  We could have a collection of users and a different collection for messages.  The purpose of the collection is similar to sub databases, in that it's purely for organizational purposes.
+Inside our each database, we can have various collections.  Each collection is a set of related JavaScript objects.  Imagine we're creating a mail application.  We could have a collection of users and a different collection for messages.  The purpose of the collection is similar to databases, in that it's purely for organizational purposes.
 
 The syntax for creating a collection is:
 
@@ -166,7 +166,7 @@ db.employees.update(
 )
 ```
 
-## Drop a Collection or an entire sub database
+## Drop a Collection or an entire database
 
 If you really screw up, you can drop a collection:
 
@@ -174,7 +174,7 @@ If you really screw up, you can drop a collection:
 db.employees.drop()
 ```
 
-If you really REALLY screw up, you can drop an entire sub database:
+If you really REALLY screw up, you can drop an entire database:
 
 ```
 db.dropDatabase()
