@@ -151,6 +151,8 @@ db.employees.update(
 
 Update will update only one document by default.  To update many, pass in a third `{ multi:true }` param
 
+Here is the list of [Update Operators](https://docs.mongodb.com/manual/reference/operator/update/set/) available.
+
 ```
 db.employees.update(
 	{name:'jennifer'},
