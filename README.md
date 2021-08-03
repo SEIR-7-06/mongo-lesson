@@ -78,7 +78,7 @@ Now we're ready to start inserting JS objects into our collection.
 ```
 db.employees.insert({
 	name:'matt',
-	gender:'m'
+	age: 20
 })
 ```
 
@@ -89,11 +89,11 @@ db.employees.insert(
 	[
 		{
 			name:'bob',
-			gender:'m'		
+			age: 42		
 		},
 		{
 			name:'jenny',
-			gender:'f'		
+			age: 36		
 		}
 	]
 )
@@ -120,7 +120,7 @@ db.employees.find().pretty()
 To find all the documents in our collection that have a gender property set to 'm', we run:
 
 ```
-db.employees.find({gender:'m'}).pretty()
+db.employees.find({age:20}).pretty()
 ```
 
 ## Remove a set of documents from a collection
@@ -128,7 +128,7 @@ db.employees.find({gender:'m'}).pretty()
 Remove a document, just like you would find it
 
 ```
-db.employees.remove({gender:'m'})
+db.employees.remove({name:'bob'})
 ```
 
 ## Update a set of documents in a collection
@@ -140,8 +140,8 @@ db.employees.update(
 	{name:'jenny'},
 	{
 		$set: {
-			gender:'jennifer',
-			age: 25
+			name:'jennifer',
+			age: 37
 		}
 	}
 )
@@ -153,11 +153,11 @@ Update will update only one document by default.  To update many, pass in a thir
 
 ```
 db.employees.update(
-	{name:'jenny'},
+	{name:'jennifer'},
 	{
 		$set: {
-			gender:'jennifer',
-			age: 25
+			name:'jennifer',
+			age: 37
 		}
 	},
 	{
